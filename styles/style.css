@@ -1,0 +1,165 @@
+/* shared styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+ul, li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+h1{
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+h2{
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+h3{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+p{
+    margin-bottom: 20px;
+}
+.d-flex{
+    display: flex;
+}
+.jc-c{
+    justify-content: center;
+}
+.jc-sb{
+    justify-content: space-between;
+}
+.ai-c{
+    align-items: center;
+}
+.jc-se{
+    justify-content: space-evenly;
+}
+.d-grid{
+    display: grid;
+}
+.gtc-4{
+    grid-template-columns: repeat(4, 1fr);
+}
+.gtc-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+.gtc-2{
+    grid-template-columns: repeat(2, 1fr);
+}
+.py-100{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.gap-20{
+    gap: 20px;
+}
+.gap-30{
+    gap: 30px;
+}
+.text-center{
+    text-align: center;
+}
+.py-50{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.w-50{
+    width: 50%;
+}
+.px-50{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.fd-c{
+    flex-direction: column;
+}
+.gap-50{
+    gap: 50px;
+}
+
+.f-wrap{
+    flex-wrap: wrap;
+}
+
+/* header related style */
+.banner-img{
+    background-image: url('/images/Circle\ design.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* cards related style */
+.card{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.see-more{
+    text-align: left;
+    margin-top: 30px;
+}
+/* Responseive related styles */
+/* for small devices */
+@media screen and (max-width:576px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .w-50{
+        width: 100%;
+    }
+    .brands{
+        justify-content: center;
+    }
+    .gtc-3{
+        grid-template-columns: auto;
+    }
+    .banner-content{
+        text-align: center;
+    }
+}
+
+/* for medium devices */
+@media screen and (min-width: 577px) and (max-width: 960px) {
+    nav, .banner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-content{
+        text-align: center;
+    }
+    .w-50{
+        width: 100%;
+    }
+    .brands{
+        justify-content: center;
+    }
+    .gtc-3{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
