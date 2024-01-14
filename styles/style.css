@@ -1,9 +1,11 @@
+/* fonts form google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 /* shared styles */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .container{
     max-width: 1140px;
@@ -100,6 +102,21 @@ p{
 .f-wrap{
     flex-wrap: wrap;
 }
+.primary-btn{
+    border: none;
+    background-color: #E02C6D;
+    padding: 10px 24px;
+    color: #fff;
+    cursor: pointer;
+}
+.primary-btn:hover i{
+    transform: translateX(5px);
+    transition: transform .5s ease-in;
+}
+
+.banner > .banner-content > button.primary-btn{
+    border-radius: 40px;
+}
 
 /* header related style */
 .banner-img{
@@ -113,10 +130,45 @@ p{
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+.card-img{
+    text-align: center;
+}
 .see-more{
-    text-align: left;
+    text-align: right;
     margin-top: 30px;
 }
+/* footer related style */
+footer{
+    background-color: #0A0826;
+    text-align: center;
+}
+footer ul li {
+    display: inline-block;
+}
+footer> ul> li > a{
+    background-color: #22213C;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+}
+/* marque related style */
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Apply the animation to the text */
+  .marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 8s linear infinite;
+  }
 /* Responseive related styles */
 /* for small devices */
 @media screen and (max-width:576px) {
@@ -136,21 +188,30 @@ p{
     .gtc-3{
         grid-template-columns: auto;
     }
-    .banner-content{
+    .banner-content,
+    .feature-img,
+    .feature-content
+    {
         text-align: center;
+    }
+    .features{
+        flex-direction: column;
     }
 }
 
 /* for medium devices */
 @media screen and (min-width: 577px) and (max-width: 960px) {
-    nav, .banner{
+    nav{
         flex-direction: column;
         align-items: center;
     }
     .banner{
         flex-direction: column-reverse;
     }
-    .banner-content{
+    .banner-content, 
+    .feature-img, 
+    .feature-content
+    {
         text-align: center;
     }
     .w-50{
@@ -161,5 +222,8 @@ p{
     }
     .gtc-3{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .features{
+        flex-direction: column;
     }
 }
