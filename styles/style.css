@@ -164,17 +164,69 @@ footer> ul> li > a{
   }
 
   /* Apply the animation to the text */
-  .marquee {
+  /* .marquee {
     white-space: nowrap;
     overflow: hidden;
-    animation: marquee 8s linear infinite;
-  }
+    animation: marquee 15s linear infinite;
+  } */
+
+/* hamberger menu */
+nav{
+    position: relative;
+}
+#check{
+    display: none;
+}
+.menu{
+    position: relative;
+}
+.open-menu, 
+.close-menu{
+    font-size: 1.5rem;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+.open-menu{
+    top: 55px;
+    right: 0;
+}
+.close-menu{
+    top: 50px;
+    right: 22px;
+}
+.top-cart{
+    position: absolute;
+    right: 0;
+    top: 35%;
+}
+
 /* Responseive related styles */
 /* for small devices */
 @media screen and (max-width:576px) {
-    nav{
+    .menu{
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        background-color: #282735;
+        color: #fff;
+        padding: 30px;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        z-index: 200;
+        transition: .5s ease-in-out;
+    }
+    .menu > li > a{
+        color: #fff;
+    }
+    .open-menu, .close-menu{
+        display: block;
+    }
+    #check:checked ~ .menu{
+        right: 0;
     }
     .banner{
         flex-direction: column-reverse;
@@ -201,9 +253,29 @@ footer> ul> li > a{
 
 /* for medium devices */
 @media screen and (min-width: 577px) and (max-width: 960px) {
-    nav{
+   .menu{
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        background-color: #282735;
+        color: #fff;
+        padding: 30px;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        z-index: 200;
+        transition: .5s ease-in-out;
+    }
+    .menu > li > a{
+        color: #fff;
+    }
+    .open-menu, .close-menu{
+        display: block;
+    }
+    #check:checked ~ .menu{
+        right: 0;
     }
     .banner{
         flex-direction: column-reverse;
